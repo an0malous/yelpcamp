@@ -46,8 +46,8 @@ app.use(function(req, res, next){
 //===========
 mongoose.Promise = global.Promise;
 
-const uri = process.env.DB_URI;
-mongoose.connect(uri, {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true}).then(
+
+mongoose.connect('mongodb+srv://freeCodeCampTest:Gz4vmOVYJSw3twTj@cluster0.xdgnk.mongodb.net/yelpcamp?retryWrites=true&w=majority', {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true}).then(
     () => { 
         /** ready to use. The `mongoose.connect()` promise resolves to undefined. */ 
         console.log('Connected to Mongo');
